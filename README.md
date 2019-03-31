@@ -32,6 +32,7 @@ Create a new class that takes in a parameter of type `ScaredPreferences`:
 
 ```
 class MyPreferences(scaredPreferences: ScaredPreferences) {
+
     // Key used here for SharedPreferences is "userId"
     // Default value is null
     var userId: String? by scaredPreferences.delegate(null)
@@ -39,6 +40,7 @@ class MyPreferences(scaredPreferences: ScaredPreferences) {
     // Key used here for SharedPreferences is "KEY_PROFILE_PIC"
     // Default value is null
     var userProfilePic: String? by scaredPreferences.delegate(null, "KEY_PROFILE_PIC")
+    
 }
 ```
 
@@ -46,6 +48,7 @@ Use this in your `Activity`/`Fragment` required like so:
 
 ```
 class MainActivity : AppCompatActivity() {
+
     private lateinit var scaredPreferences: ScaredPreferences
     private lateinit var myPreferences: MyPreferences
 
@@ -68,6 +71,9 @@ class MainActivity : AppCompatActivity() {
         // Get your MyPreferences
         Log.d("MY_USER_ID", myPreferences.userId)
         Log.d("MY_USER_PIC", myPreferences.userProfilePic)
+        
+    }
+}
 ```
 
 ## Developed By
