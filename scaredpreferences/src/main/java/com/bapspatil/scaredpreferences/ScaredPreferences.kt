@@ -60,7 +60,7 @@ class ScaredPreferences constructor(private val sharedPrefs: SharedPreferences) 
         return this.get(key, defaultValue, T::class)
     }
 
-    inline fun <reified T> delegate(defaultValue: T, key: String? = null): ReadWriteProperty<Any, T> {
+    inline fun <reified T> delegate(key: String? = null, defaultValue: T): ReadWriteProperty<Any, T> {
         return object : ReadWriteProperty<Any, T> {
             override fun getValue(thisRef: Any, property: KProperty<*>) = this@ScaredPreferences.get(key ?: property.name, defaultValue, T::class)
 
