@@ -1,5 +1,8 @@
 # ScaredPreferences
 
+[![GitHub license](https://img.shields.io/github/license/bapspatil/ScaredPreferences.svg)](https://github.com/bapspatil/ScaredPreferences/blob/master/LICENSE)
+[![Jitpack](https://jitpack.io/v/bapspatil/ScaredPreferences.svg)](https://jitpack.io/#bapspatil/ScaredPreferences)
+
 A Kotlin library that makes using SharedPreferences less scary. 
 
 ## Download
